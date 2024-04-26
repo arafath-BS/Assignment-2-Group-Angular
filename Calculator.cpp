@@ -1,30 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int multiplication(int firstNumber, int secondNumber)
-{
-   return firstNumber*secondNumber;
+
+int addition(int firstNumber, int secondNumber) {
+    return firstNumber + secondNumber;
 }
-
-
 
 int Subtraction(int firstNumber, int secondNumber){
     return firstNumber - secondNumber;
 }
 
 
-template<typename T>T addNumbers(T a, T b) {
+int multiplication(int firstNumber, int secondNumber)
+{
+   return firstNumber*secondNumber;
 
-    return a + b;
 }
 
-double divide(double num1, double num2) {
-    if (num2 == 0) {
-        std::cout << "Error: Division by zero is not allowed." << std::endl;
+double division(double firstNumber, double secondNumber) {
+    if (secondNumber == 0) {
+        cout << "Error: Division by zero is not allowed." << endl;
         return 0; 
     }
-    return num1 / num2;
+    return firstNumber / secondNumber;
 
+}
+
+int findReminder(int firstNumber, int secondNumber){
+    if(secondNumber==0){
+        cout << "No number can be divide by zero. Enter a valid number\n";
+    }else
+        return firstNumber % secondNumber;
 }
 
 int main(){
@@ -33,26 +39,20 @@ int main(){
     int firstNumber,secondNumber;
     char operand;
 
-   
-
-    
     cout<<"Enter first number\n";
     cin>>firstNumber;
 
     cout<<"Enter Second number\n";
     cin>>secondNumber;
 
-
     cout<<"Enter Operand\n";
+    cout<<"+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)"
     cin>>operand;
 
-
- 
-        
         switch (operand){
 
             case '+':
-            cout<<addNumbers(firstNumber,secondNumber)<<endl;
+            cout<<addition(firstNumber,secondNumber)<<endl;
             break;
 
             case '-':
@@ -64,12 +64,11 @@ int main(){
             break;
 
             case '/':
-            cout<<divide(firstNumber,secondNumber)<<endl;
+            cout<<division(firstNumber,secondNumber)<<endl;
             break;
-
-        }
-
-     
+            case '%':
+                cout << findReminder(firstNumber, secondNumber) << endl;
+        }   
     
     return 0;
 }
