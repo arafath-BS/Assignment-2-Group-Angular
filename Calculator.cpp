@@ -1,6 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+
 int addition(int firstNumber, int secondNumber) {
     return firstNumber + secondNumber;
 }
@@ -9,9 +10,11 @@ int Subtraction(int firstNumber, int secondNumber){
     return firstNumber - secondNumber;
 }
 
+
 int multiplication(int firstNumber, int secondNumber)
 {
    return firstNumber*secondNumber;
+
 }
 
 double division(double firstNumber, double secondNumber) {
@@ -31,6 +34,7 @@ int findReminder(int firstNumber, int secondNumber){
 }
 
 int main(){
+
 
     int firstNumber,secondNumber;
     char operand;
