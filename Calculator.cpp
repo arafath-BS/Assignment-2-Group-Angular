@@ -1,8 +1,20 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-template<typename T>
-T addNumbers(T a, T b) {
+int multiplication(int firstNumber, int secondNumber)
+{
+   return firstNumber*secondNumber;
+}
+
+
+
+int Subtraction(int firstNumber, int secondNumber){
+    return firstNumber - secondNumber;
+}
+
+
+template<typename T>T addNumbers(T a, T b) {
+
     return a + b;
 }
 
@@ -12,48 +24,52 @@ double divide(double num1, double num2) {
         return 0; 
     }
     return num1 / num2;
+
 }
+
 int main(){
-    char choice;
 
-    while (true) {
 
-        cout << "Menu:" << endl;
-        cout << "1. Add two number" << endl;
-        cout << "2. Substract two number" << endl;
-        cout << "3. Multifly two number" << endl;
-        cout << "4. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
+    int firstNumber,secondNumber;
+    char operand;
 
-        double firstNumber,secondNumber;
-        switch (choice) {
-            case '1':
-                cout<< "Enter two number for adding : "<<endl;
-                cin>>firstNumber>>secondNumber;
-                cout << addNumbers(firstNumber,secondNumber) << endl;
-                break;
-            // case '2':
-            //     cout<< "Enter two number for substraction : "<<endl;
-            //     cin>>firstNumber>>secondNumber;
-            //     cout << addNumbers(firstNumber,secondNumber) << endl;
-            //     break;
-            // case '3':
-            //     cout<< "Enter two number for multiplication : "<<endl;
-            //     cin>>firstNumber>>secondNumber;
-            //     cout << addNumbers(firstNumber,secondNumber) << endl;
-            //     break;
-            // case '4':
-            //     cout<< "Enter two number for division : "<<endl;
-            //     cin>>firstNumber>>secondNumber;
-            //     cout << addNumbers(firstNumber,secondNumber) << endl;
-            //     break; 
-            case '5':
-                cout << "Exiting program." << endl;
-                return 0;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-                break;
+   
+
+    
+    cout<<"Enter first number\n";
+    cin>>firstNumber;
+
+    cout<<"Enter Second number\n";
+    cin>>secondNumber;
+
+
+    cout<<"Enter Operand\n";
+    cin>>operand;
+
+
+ 
+        
+        switch (operand){
+
+            case '+':
+            cout<<addNumbers(firstNumber,secondNumber)<<endl;
+            break;
+
+            case '-':
+            cout<<Subtraction(firstNumber,secondNumber)<<endl;
+            break;
+
+            case '*':
+            cout<<multiplication(firstNumber,secondNumber)<<endl;
+            break;
+
+            case '/':
+            cout<<divide(firstNumber,secondNumber)<<endl;
+            break;
+
         }
-    }
+
+     
+    
+    return 0;
 }
