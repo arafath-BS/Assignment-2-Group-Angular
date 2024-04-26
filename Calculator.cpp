@@ -1,5 +1,4 @@
 #include<bits/stdc++.h>
-#include<bits/stdc++.h>
 using namespace std;
 
 int addition(int firstNumber, int secondNumber) {
@@ -53,7 +52,6 @@ int main(){
             break;
 
             case '-':
-            cout<<Subtraction(firstNumber,secondNumber)<<endl;
             cout<<Subtraction(firstNumber,secondNumber)<<endl;
             break;
 
