@@ -1,8 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-
 int multiplication(int firstNumber, int secondNumber)
 {
    return firstNumber*secondNumber;
@@ -16,6 +14,7 @@ int Subtraction(int firstNumber, int secondNumber){
 
 
 template<typename T>T addNumbers(T a, T b) {
+
     return a + b;
 }
 
@@ -29,6 +28,7 @@ double divide(double num1, double num2) {
 }
 
 int main(){
+
 
     int firstNumber,secondNumber;
     char operand;

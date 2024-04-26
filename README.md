@@ -1,3 +1,39 @@
+
+# Assignment-2-Group-Angular
+# Calculator Program
+
+## Introduction
+This is a simple calculator program implemented in C++. It allows users to perform basic arithmetic operations such as addition, subtraction, multiplication, and division on two numbers.
+
+## Features
+- **Addition:** Add two numbers together.
+- **Subtraction:** Subtract one number from another.
+- **Multiplication:** Multiply two numbers together.
+- **Division:** Divide one number by another.
+
+## How to Use
+1. Clone the repository to your local machine.
+    ```
+    git clone <repository-url>
+    ```
+   
+2. Navigate to the project directory.
+    ```
+    cd Calculator-Program
+    ```
+
+3. Compile the program using a C++ compiler (e.g., g++).
+    ```
+    g++ calculator.cpp -o calculator
+    ```
+
+4. Run the program.
+    ```
+    ./calculator
+    ```
+
+5. Follow the on-screen instructions to perform calculations.
+
 Division Function:
 
 This C++ code defines a divide function that performs division on two numbers. It checks for division by zero and returns the result of the division operation.
@@ -33,6 +69,7 @@ Identity property: Multiplying any number by 1 results in the original number. F
 Zero property: Multiplying any number by 0 results in 0. For example, 6 × 0 = 0.
 Distributive property: Multiplication distributes over addition and subtraction. For example, a × (b + c) equals (a × b) + (a × c).
 Multiplication is a crucial operation used in various mathematical concepts and real-world applications, such as calculating areas and volumes, scaling measurements, solving equations, and more. It serves as a foundational concept in mathematics and is extensively used in everyday life.
+
 
 
 
