@@ -52,11 +52,11 @@ int main(){
         switch (operand){
 
             case '+':
-            cout<<multiplication(firstNumber,secondNumber)<<endl;
+            cout<<addNumbers(firstNumber,secondNumber)<<endl;
             break;
 
             case '-':
-            cout<<multiplication(firstNumber,secondNumber)<<endl;
+            cout<<Subtraction(firstNumber,secondNumber)<<endl;
             break;
 
             case '*':
@@ -64,7 +64,7 @@ int main(){
             break;
 
             case '/':
-            cout<<multiplication(firstNumber,secondNumber)<<endl;
+            cout<<divide(firstNumber,secondNumber)<<endl;
             break;
 
         }
