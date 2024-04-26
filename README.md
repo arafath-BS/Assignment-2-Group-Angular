@@ -10,6 +10,7 @@ This is a simple calculator program implemented in C++. It allows users to perfo
 - **Subtraction:** Subtract one number from another.
 - **Multiplication:** Multiply two numbers together.
 - **Division:** Divide one number by another.
+- **FindReminder:** Find reminder upon divide one number by other.
 
 ## How to Use
 1. Clone the repository to your local machine.
@@ -71,13 +72,6 @@ Distributive property: Multiplication distributes over addition and subtraction.
 Multiplication is a crucial operation used in various mathematical concepts and real-world applications, such as calculating areas and volumes, scaling measurements, solving equations, and more. It serves as a foundational concept in mathematics and is extensively used in everyday life.
 
 
-
-
-
-
-
-
-
 Multiplication is a fundamental arithmetic operation that involves combining groups of numbers together. It is often represented by the symbol "×" or "*", and it results in finding the total number of items when groups of equal size are combined.
 
 For example, in the expression 3 × 4:
@@ -98,6 +92,10 @@ Identity property: Multiplying any number by 1 results in the original number. F
 Zero property: Multiplying any number by 0 results in 0. For example, 6 × 0 = 0.
 Distributive property: Multiplication distributes over addition and subtraction. For example, a × (b + c) equals (a × b) + (a × c).
 Multiplication is a crucial operation used in various mathematical concepts and real-world applications, such as calculating areas and volumes, scaling measurements, solving equations, and more. It serves as a foundational concept in mathematics and is extensively used in everyday life.
+
+Subtraction: Provide two number and press '-' from your keyboard then you are done. Our program will automatic calculated result and show you thats. 
+FindReminder: provide two number and provide '%' your are all done. Program will calculate the results for your.
+Caution: If you second number zero it couldn't able to find any reminder as divide by zero is prohibited. 
 
 
 
