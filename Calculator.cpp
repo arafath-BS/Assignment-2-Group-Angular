@@ -1,10 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
 int addition(int firstNumber, int secondNumber) {
     return firstNumber + secondNumber;
 }
+
 
 int Subtraction(int firstNumber, int secondNumber){
     return firstNumber - secondNumber;
@@ -33,6 +33,23 @@ int findReminder(int firstNumber, int secondNumber){
         return firstNumber % secondNumber;
 }
 
+string Check(int val)
+{
+    if(val%2==0 && val>=0){
+        return "(Even; Positive;)";
+    }
+    else if(val%2==0 && val<0){
+        return "(Even; Negative;)";
+    }
+    else if(val%2 && val>=0){
+        return "(Odd; Positive;)";
+    }
+    else if(val%2 && val<0){
+        return "(Odd; Negative;)";
+    }
+}
+
+
 int main(){
 
 
@@ -46,29 +63,45 @@ int main(){
     cin>>secondNumber;
 
     cout<<"Enter Operand\n";
-    cout << "+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)";
+    cout<<"+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)"<<endl;
     cin>>operand;
-
+    int result;
         switch (operand){
 
             case '+':
-            cout<<addition(firstNumber,secondNumber)<<endl;
+            result=addition(firstNumber,secondNumber);
+            cout<<firstNumber<<" + "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" + "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+
             break;
 
             case '-':
-            cout<<Subtraction(firstNumber,secondNumber)<<endl;
+            result=Subtraction(firstNumber,secondNumber);
+            cout<<firstNumber<<" - "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" - "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
             break;
 
             case '*':
-            cout<<multiplication(firstNumber,secondNumber)<<endl;
+            result=multiplication(firstNumber,secondNumber);
+            cout<<firstNumber<<" * "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" * "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
             break;
 
             case '/':
-            cout<<division(firstNumber,secondNumber)<<endl;
+            result=division(firstNumber,secondNumber);
+            cout<<firstNumber<<" / "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" / "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
             break;
             case '%':
-                cout << findReminder(firstNumber, secondNumber) << endl;
-        }   
+            result=findReminder(firstNumber, secondNumber);
+            cout<<firstNumber<<" % "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" % "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+            break;
+            default:
+                cout << "Invalid operand! Please provide a valid Operator\n";
+        }
     
     return 0;
+
+    
 }
