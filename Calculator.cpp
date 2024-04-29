@@ -32,6 +32,7 @@ int findReminder(int firstNumber, int secondNumber){
     }else
         return firstNumber % secondNumber;
 }
+
 string Check(int val)
 {
     if(val%2==0 && val>=0){
@@ -47,6 +48,7 @@ string Check(int val)
         return "(Odd; Negative;)";
     }
 }
+
 
 int main(){
 
@@ -70,6 +72,7 @@ int main(){
             result=addition(firstNumber,secondNumber);
             cout<<firstNumber<<" + "<<secondNumber<<" = "<<result<<endl;
             cout<<Check(firstNumber)<<" + "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+
             break;
 
             case '-':
@@ -93,7 +96,8 @@ int main(){
             result=findReminder(firstNumber, secondNumber);
             cout<<firstNumber<<" % "<<secondNumber<<" = "<<result<<endl;
             cout<<Check(firstNumber)<<" % "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
-        }   
+            break;
+
     
     return 0;
 }
