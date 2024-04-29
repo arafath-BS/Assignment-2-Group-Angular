@@ -97,8 +97,11 @@ int main(){
             cout<<firstNumber<<" % "<<secondNumber<<" = "<<result<<endl;
             cout<<Check(firstNumber)<<" % "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
             break;
+
             default:
                 cout << "Invalid operand! Please provide a valid Operator\n";
+
+
         }
     
     return 0;
