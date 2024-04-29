@@ -46,7 +46,7 @@ int main(){
     cin>>secondNumber;
 
     cout<<"Enter Operand\n";
-    cout<<"+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)"
+    cout << "+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)";
     cin>>operand;
 
         switch (operand){
