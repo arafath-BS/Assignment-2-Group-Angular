@@ -97,7 +97,9 @@ int main(){
             cout<<firstNumber<<" % "<<secondNumber<<" = "<<result<<endl;
             cout<<Check(firstNumber)<<" % "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
             break;
-
+        }
     
     return 0;
+
+    
 }
