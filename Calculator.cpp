@@ -1,75 +1,99 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int multiplication(int firstNumber, int secondNumber)
-{
-   return firstNumber*secondNumber;
+
+int addition(int firstNumber, int secondNumber) {
+    return firstNumber + secondNumber;
 }
-
-
 
 int Subtraction(int firstNumber, int secondNumber){
     return firstNumber - secondNumber;
 }
 
 
-template<typename T>T addNumbers(T a, T b) {
+int multiplication(int firstNumber, int secondNumber)
+{
+   return firstNumber*secondNumber;
 
-    return a + b;
 }
 
-double divide(double num1, double num2) {
-    if (num2 == 0) {
-        std::cout << "Error: Division by zero is not allowed." << std::endl;
+double division(double firstNumber, double secondNumber) {
+    if (secondNumber == 0) {
+        cout << "Error: Division by zero is not allowed." << endl;
         return 0; 
     }
-    return num1 / num2;
+    return firstNumber / secondNumber;
 
+}
+
+int findReminder(int firstNumber, int secondNumber){
+    if(secondNumber==0){
+        cout << "No number can be divide by zero. Enter a valid number\n";
+    }else
+        return firstNumber % secondNumber;
+}
+string Check(int val)
+{
+    if(val%2==0 && val>=0){
+        return "(Even; Positive;)";
+    }
+    else if(val%2==0 && val<0){
+        return "(Even; Negative;)";
+    }
+    else if(val%2 && val>=0){
+        return "(Odd; Positive;)";
+    }
+    else if(val%2 && val<0){
+        return "(Odd; Negative;)";
+    }
 }
 
 int main(){
-    char choice;
 
-    while (true) {
 
-        cout << "Menu:" << endl;
-        cout << "1. Add two number" << endl;
-        cout << "2. Substract two number" << endl;
-        cout << "3. Multifly two number" << endl;
-        cout << "4. Divide two number" << endl;
-        cout << "5. Exit" << endl;
-        cout << "Enter your choice: ";
-        cin >> choice;
+    int firstNumber,secondNumber;
+    char operand;
 
-        double firstNumber,secondNumber;
-        switch (choice) {
-            case '1':
-                cout<< "Enter two number for adding : "<<endl;
-                cin>>firstNumber>>secondNumber;
-                cout << addNumbers(firstNumber,secondNumber) << endl;
-                break;
-            case '2':
-                cout<< "Enter two number for substraction : "<<endl;
-                cin>>firstNumber>>secondNumber;
-                cout << Subtraction(firstNumber,secondNumber) << endl;
-                break;
-            case '3':
-                cout<< "Enter two number for multiplication : "<<endl;
-                cin>>firstNumber>>secondNumber;
-                cout << multiplication(firstNumber,secondNumber) << endl;
-                break;
-            case '4':
-                cout<< "Enter two number for division : "<<endl;
-                cin>>firstNumber>>secondNumber;
-                cout << divide(firstNumber,secondNumber) << endl;
-                break; 
-            case '5':
-                cout << "Exiting program." << endl;
-                return 0;
-            default:
-                cout << "Invalid choice. Please try again." << endl;
-                break;
-        }
-    }
+    cout<<"Enter first number\n";
+    cin>>firstNumber;
 
+    cout<<"Enter Second number\n";
+    cin>>secondNumber;
+
+    cout<<"Enter Operand\n";
+    cout<<"+ (for addition) - (for subtraction) * (for multiplication) / (for division) % (for finding reminder)"<<endl;
+    cin>>operand;
+    int result;
+        switch (operand){
+
+            case '+':
+            result=addition(firstNumber,secondNumber);
+            cout<<firstNumber<<" + "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" + "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+            break;
+
+            case '-':
+            result=Subtraction(firstNumber,secondNumber);
+            cout<<firstNumber<<" - "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" - "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+            break;
+
+            case '*':
+            result=multiplication(firstNumber,secondNumber);
+            cout<<firstNumber<<" * "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" * "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+            break;
+
+            case '/':
+            result=division(firstNumber,secondNumber);
+            cout<<firstNumber<<" / "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" / "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+            break;
+            case '%':
+            result=findReminder(firstNumber, secondNumber);
+            cout<<firstNumber<<" % "<<secondNumber<<" = "<<result<<endl;
+            cout<<Check(firstNumber)<<" % "<<Check(secondNumber)<<" = "<<Check(result)<<endl;
+        }   
+    
+    return 0;
 }
